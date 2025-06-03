@@ -1,4 +1,4 @@
-FROM ubuntu : focal
+FROM ubuntu:focal
 RUN apt -y update
 COPY ./opt
 WORKDIR /opt
