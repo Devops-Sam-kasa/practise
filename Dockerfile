@@ -1,6 +1,9 @@
 FROM ubuntu:noble
 
-RUN apt -y update && apt -y install python3 python3-pip python-venv
+RUN apt -y update 
+
+RUN apt -y install python3 python3-pip python3-venv
+
 
 WORKDIR /app
 
