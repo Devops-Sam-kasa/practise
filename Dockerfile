@@ -1,6 +1,6 @@
-FROM ubuntu:focal
+FROM ubuntu:noble
 
-RUN apt -y update && apt -y install python3 python3-pip
+RUN apt -y update && apt -y install python3 python3-pip python-venv
 
 WORKDIR /app
 
