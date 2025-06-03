@@ -1,6 +1,11 @@
 FROM ubuntu:focal
-RUN apt -y update
-COPY ./opt /opt
-WORKDIR /opt
-RUN pip install -r requirement.txt
-CMD ["python","app/manage.py","runserver","0.0.0.0:9002"]
+
+RUN apt -y update && apt -y install python3 python3-pip
+
+WORKDIR /app
+
+COPY . /app
+
+RUN pip3 install -r requirement.txt
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:9002"]
