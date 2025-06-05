@@ -1,4 +1,4 @@
-FROM ubuntu:noble
+FROM python:3.9.23-slim-bullseye
 
 RUN apt -y update 
 
