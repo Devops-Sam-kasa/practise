@@ -1,4 +1,4 @@
-FROM python:3.9.23-slim-bullseye
+FROM python1;3.11-slim-bullseye
 
 RUN apt -y update 
 
@@ -9,6 +9,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip3 install -r requirement.txt
+RUN pip install -r requirement.txt
 
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:9002"]
+CMD ["python3", "app/manage.py", "runserver", "0.0.0.0:9002"]
