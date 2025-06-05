@@ -1,4 +1,4 @@
-FROM python1;3.11-slim-bullseye
+FROM python:3.11-slim-bullseye
 
 RUN apt -y update 
 
